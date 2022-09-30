@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Imperative Apex">
+        <div class="slds-m-around_medium">
+            <lightning-button
+                label="Click Me"
+                variant="brand"
+                onclick={getOpps}>
+            </lightning-button>
+            <div class="slds-m-top_medium">
+                <template if:true={opps}>
+                    <lightning-datatable
+                        key-field="Id"
+                        data={opps}
+                        columns={columns}>
+                    </lightning-datatable>
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>
